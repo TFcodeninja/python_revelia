@@ -1,0 +1,26 @@
+# Clés d’API et variables d’environnement
+.env
+
+# Fichiers temporaires
+*.pyc
+__pycache__/
+
+# Fichiers audio et image générés
+*.wav
+*.mp3
+*.jpg
+*.png
+
+# Dossiers Streamlit et logs
+.streamlit/
+logs/
+
+# Base de données locale
+data/*.db
+
+# IDE / éditeurs
+.vscode/
+.idea/
+
+# Mac & OS files
+.DS_Store
