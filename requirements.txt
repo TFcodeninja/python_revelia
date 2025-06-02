@@ -1,4 +1,7 @@
-openai==1.14.2
-mistralai==0.0.7
-replicate==0.24.0
-python-dotenv==1.0.1
+openai
+replicate
+python-dotenv
+sounddevice
+scipy
+streamlit
+mistralai
