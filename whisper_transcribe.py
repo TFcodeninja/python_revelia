@@ -2,6 +2,7 @@ import os
 import json
 from dotenv import load_dotenv
 from groq import Groq
+from pathlib import Path
 
 
 
@@ -28,6 +29,6 @@ def get_text_from_audio(filename):
         return transcription.text
 
 if __name__ == "__main__":
-    filename = os.path.dirname(__file__) + "/Grouv.wav" # Replace with your audio file!
+    filename = os.path.dirname(__file__) + "/reve.wav" # Replace with your audio file!
     text = get_text_from_audio(filename)
     print(text)

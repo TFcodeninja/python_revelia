@@ -1,8 +1,8 @@
-openai
-replicate
-python-dotenv
-sounddevice
-scipy
 streamlit
-mistralai
 pillow
+requests
+python-dotenv
+mistralai
+groq
+streamlit-lottie
+soundfile

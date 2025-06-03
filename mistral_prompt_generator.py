@@ -5,6 +5,8 @@ from mistralai.models.chat_completion import ChatMessage
 from whisper_transcribe import get_text_from_audio
 from pathlib import Path
 
+
+
 load_dotenv()
 
 def generate_prompt(transcribed_text, style="onirique, poétique"):
@@ -42,6 +44,6 @@ def get_prompt_from_audio(audio_file_path):
 
 
 if __name__ == "__main__":
-    audio_path = Path(__file__).parent / "Grouv.wav"
+    audio_path = Path(__file__).parent / "reve.wav"
     prompt = get_prompt_from_audio(audio_path)
     print("\n🎨 Prompt généré :\n", prompt)
