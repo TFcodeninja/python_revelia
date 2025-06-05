@@ -1,11 +1,16 @@
+# mistral_prompt_generator.py
+
 import os
 from dotenv import load_dotenv
-from mistralai.client import MistralClient
-from mistralai.models.chat_completion import ChatMessage
-from whisper_transcribe import get_text_from_audio
 from pathlib import Path
 
+# Import “fork” pour ChatMessage selon la version de mistralai
+try:
+    from mistralai.models.chat_completion import ChatMessage
+except ImportError:
+    from mistralai.types import ChatMessage
 
+from mistralai.client import MistralClient
 
 load_dotenv()
 
@@ -33,17 +38,18 @@ def generate_prompt(transcribed_text, style="onirique, poétique"):
     return response.choices[0].message.content.strip()
 
 
-
 def get_prompt_from_audio(audio_file_path):
     """
     Transcrit un audio avec Groq, puis génère un prompt artistique via Mistral.
     """
+    from whisper_transcribe import get_text_from_audio
+
     transcription = get_text_from_audio(audio_file_path)
     prompt = generate_prompt(transcription)
     return prompt
 
 
 if __name__ == "__main__":
-    audio_path = Path(__file__).parent / "reve.wav"
+    audio_path = Path(__file__).parent / "Grouv.wav"
     prompt = get_prompt_from_audio(audio_path)
     print("\n🎨 Prompt généré :\n", prompt)

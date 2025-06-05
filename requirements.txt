@@ -1,8 +1,9 @@
 streamlit
 pillow
 requests
-python-dotenv
-mistralai
-groq
 streamlit-lottie
+sounddevice
 soundfile
+python-dotenv
+mistralai==0.0.7
+groq
